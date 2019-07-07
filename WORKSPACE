@@ -38,13 +38,10 @@ git_repository(
     shallow_since = "1551387314 -0800",
 )
 
-http_archive(
+git_repository(
     name = "io_bazel_rules_go",
-    sha256 = "f04d2373bcaf8aa09bccb08a98a57e721306c8f6043a2a0ee610fd6853dcde3d",
-    urls = [
-        "https://storage.googleapis.com/bazel-mirror/github.com/bazelbuild/rules_go/releases/download/0.18.6/rules_go-0.18.6.tar.gz",
-        "https://github.com/bazelbuild/rules_go/releases/download/0.18.6/rules_go-0.18.6.tar.gz",
-    ],
+    remote = "https://github.com/bazelbuild/rules_go.git",
+    commit = "792fc6d3ec004e40dfaaff79fbbe461e482022e3",
 )
 
 git_repository(
