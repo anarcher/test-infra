@@ -402,10 +402,12 @@ func reconcile(c reconciler, key string) error {
 		case !ok, v != "true":
 			return nil
 		}
-		logrus.Infof("Delete PipelineRun/%s", key)
-		if err = c.deletePipelineRun(ctx, namespace, name); err != nil {
-			return fmt.Errorf("delete pipelinerun: %v", err)
-		}
+		/*
+			logrus.Infof("Delete PipelineRun/%s", key)
+			if err = c.deletePipelineRun(ctx, namespace, name); err != nil {
+				return fmt.Errorf("delete pipelinerun: %v", err)
+			}
+		*/
 		return nil
 	case finalState(pj.Status.State):
 		logrus.Infof("Observed finished: %s", key)
